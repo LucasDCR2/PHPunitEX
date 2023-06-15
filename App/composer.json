@@ -1,0 +1,6 @@
+{
+    "require": {
+        "respect/validation": "^2.0",
+        "egulias/email-validator": "^4.0"
+    }
+}

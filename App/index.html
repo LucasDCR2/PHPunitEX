@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulário em PHP</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class = "all">
+<main class = "all">
+	<section class = "section">
+		<div class = "divisao">
+			<h1>FORMULÁRIO</h1>
+			<form id = "form" class = "formulario" action="dados.php" method="POST">
+
+				<label class = "texto" for="nome">Nome:*</label>
+				<input class="input" type="text" id="nome" placeholder="Digite seu Nome" name="nome" oninput="this.value = this.value.replace(/[^A-Za-z]/g, '')">
+
+				<label class = "texto" for="email">E-mail:*</label>
+				<input class = "input" type="email" id="email" placeholder = "Digite seu E-mail" name="email" >
+		
+				<label class = "texto" for="cpf">CPF:*</label>
+				<input class = "input" type="text" id="cpf" placeholder = "Digite seu CPF" name="cpf" size="14" maxlength="14" oninput="this.value = this.value.replace(/[^-,0-9,.]/g, '');">
+
+				<label class = "texto" for="genero">Gênero:*</label>
+				<select class = "input" id="genero" name="genero" >
+					<option value="">Selecione</option>
+					<option value="masculino">Masculino</option>
+					<option value="feminino">Feminino</option>
+					<option value="outro">Outro</option>
+				</select>
+
+				<button class = "botao" type="submit">Enviar</button>
+				<div class = "alerta">
+					<div class = "alerta-sucesso" id="alerta-sucesso"></div>
+					<div class = "alerta-erro" id="alerta-erro"></div>
+				</div>
+			</form>
+		</div>
+	</section>			
+</main>
+	<script src="js/backend.js"></script>
+</body>
